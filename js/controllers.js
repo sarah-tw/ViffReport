@@ -32,6 +32,14 @@ angular.module('viffReport', [])
       $scope.approveDiff = function(){
         $scope.currentViff.misMatchPercentage = 0;
       }
+
+      key('/', function(){
+        $scope.$apply(function () {
+          $("#search_input").focus();
+        });
+        return false;
+      });
+
       
       key('A, ctrl+A', function(){
         $scope.$apply(function () {
