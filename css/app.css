@@ -7,9 +7,9 @@ header{background-color: #333;background-repeat: repeat-x;background: -webkit-gr
 header {padding: 0 10px; color: #f1f1f2;position: fixed; left: 0; right: 0;z-index: 4;}
 header .select-browser,header .show-result {line-height: 42px;}
 header .select-browser select {width: 100px; margin-left: -110px; -webkit-border-radius: 0px;padding: 2px 8px;}
-header .select-browser label {color: #ccc;padding:2px 4px;border-top: 1px solid #999;border-bottom: 1px solid #999;}
+header .select-browser label {color: #ccc;padding:2px 4px;border-right:1px solid #999;border-top: 1px solid #999;border-bottom: 1px solid #999;}
 header .select-browser label:first-child{padding-left:8px;border-left: 1px solid #999;border-top-left-radius: 6px;border-bottom-left-radius: 6px;}
-header .select-browser label:last-child{padding-right:8px;border-right: 1px solid #999;border-top-right-radius: 6px;border-bottom-right-radius: 6px;border-: 6px;}
+header .select-browser label:last-child{padding-right:8px;border-top-right-radius: 6px;border-bottom-right-radius: 6px;border-: 6px;}
 header .select-browser .checked-true{background: rgb(207, 105, 123);color: #f1f1f2}
 header .show-result{text-align: right;}
 header .show-result .count {font-size: 18px}

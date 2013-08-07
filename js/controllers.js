@@ -92,6 +92,38 @@ angular.module('viffReport', [])
         });
       });
 
+      key('f', function () {
+        $scope.$apply(function () {
+          $scope.search.browser = "firefox"
+          return false;
+        });
+      });
+      key('c', function () {
+        $scope.$apply(function () {
+          $scope.search.browser = "chrome"
+          return false;
+        });
+      });
+      key('i', function () {
+        $scope.$apply(function () {
+          $scope.search.browser = "ie"
+          return false;
+        });
+      });
+      key('o', function () {
+        $scope.$apply(function () {
+          $scope.search.browser = "opera"
+          return false;
+        });
+      });
+
+      key('s', function () {
+        $scope.$apply(function () {
+          $scope.search.browser = "safari"
+          return false;
+        });
+      });
+
       $scope.$apply();
     }
 
