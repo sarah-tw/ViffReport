@@ -12,7 +12,7 @@
     <div class="pure-g-r">
       <div class="pure-u-1-6"><h1>Viff Report</h1></div>
       <div class="pure-u-1-2 select-browser">
-        <label ng-repeat="browser in browsers">
+        <label ng-repeat="browser in browsers" class="checked-{{browser == search.browser}}">
           <input type="radio" value="{{browser}}" ng-model="search.browser"/>
           {{browser}}
         </label>
