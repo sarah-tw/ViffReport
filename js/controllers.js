@@ -50,9 +50,10 @@ angular.module('viffReport', [])
 
       key('j', function () {
         $scope.$apply(function () {
-          var idx = $scope.cases.indexOf($scope.currentViff);
-          if(idx != $scope.cases.length - 1) {
-            $scope.currentViff = $scope.cases[idx + 1];
+          var currentBrowserCases = filter($scope.cases, function(item){ return item.browser == $scope.search.browser})
+          var idx = currentBrowserCases.indexOf($scope.currentViff);
+          if(idx != currentBrowserCases.length - 1) {
+            $scope.currentViff = currentBrowserCases[idx + 1];
             $scope.currentViffId = $scope.currentViff.id;
           }
           return false;
@@ -61,9 +62,10 @@ angular.module('viffReport', [])
 
       key('k', function () {
         $scope.$apply(function () {
-          var idx = $scope.cases.indexOf($scope.currentViff);
+          var currentBrowserCases = filter($scope.cases, function(item){ return item.browser == $scope.search.browser})
+          var idx = currentBrowserCases.indexOf($scope.currentViff);
           if(idx != 0) {
-            $scope.currentViff = $scope.cases[idx - 1];
+            $scope.currentViff = currentBrowserCases[idx - 1];
             $scope.currentViffId = $scope.currentViff.id;
           }
           return false;
