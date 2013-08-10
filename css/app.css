@@ -10,7 +10,7 @@ header .select-browser select {width: 100px; margin-left: -110px; -webkit-border
 header .select-browser label {color: #ccc;padding:2px 4px;border-right:1px solid #999;border-top: 1px solid #999;border-bottom: 1px solid #999;}
 header .select-browser label:first-child{padding-left:8px;border-left: 1px solid #999;border-top-left-radius: 6px;border-bottom-left-radius: 6px;}
 header .select-browser label:last-child{padding-right:8px;border-top-right-radius: 6px;border-bottom-right-radius: 6px;border-: 6px;}
-header .select-browser .checked-true{background: rgb(207, 105, 123);color: #f1f1f2}
+header .select-browser .checked-true{background: rgb(228, 136, 36);color: #f1f1f2}
 header .show-only-diff {line-height: 42px;}
 header .show-result{text-align: right;line-height: 42px;}
 header .show-result .count {font-size: 18px}
