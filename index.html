@@ -20,8 +20,8 @@
         </div>
         <div class="show-only-diff">
           <label>
-            <input type="checkbox" />
-            Show only diff
+            <input type="checkbox" ng-model="hasDiff" />
+            Show all cases
         </label>
         </div>
         
@@ -48,7 +48,7 @@
         <form class="pure-form">
           <div class="pure-menu pure-menu-open">
             <ul>
-              <li ng-repeat="viff in currentCases" class="viff-{{viff.misMatchPercentage != 0}}">
+              <li ng-repeat="viff in currentCases | filter:hasDiff" class="viff-{{viff.misMatchPercentage != 0}}">
                 <input id="{{viff.id}}" type="radio" value="{{viff.id}}" ng-model="$parent.currentViffId" name="viffId"/>
                 <label for="{{viff.id}}" title="mismatch percentage:{{viff.misMatchPercentage}}%">
                   {{viff.url}}
