@@ -7,7 +7,7 @@ angular.module('viffReport', [])
       $scope.sameCount = caseCount - diffCount;
       $scope.cases = results;
       $scope.browsers = browsers;
-      $scope.hasDiff = false;
+      $scope.showAll = false;
       $scope.search = {
         browser: browsers[0],
         url: '',
