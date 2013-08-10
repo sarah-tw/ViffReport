@@ -7,25 +7,35 @@ angular.module('viffReport', [])
       $scope.sameCount = caseCount - diffCount;
       $scope.cases = results;
       $scope.browsers = browsers;
-
       $scope.search = {
         browser: browsers[0],
-        url: ''
+        url: '',
       };
 
-      $scope.currentViff = results[0];
+      function resetCurrentCases(){
+        $scope.currentBrowserCases = filter($scope.cases, function(viffCase){ 
+          return viffCase.browser == $scope.search.browser && viffCase.url.indexOf($scope.search.url) >=0
+        });
+        $scope.currentCases = $scope.currentBrowserCases;
+        $scope.currentViff = $scope.currentBrowserCases[0];
+        $scope.currentViffId = $scope.currentViff.id;  
+      }
 
       $scope.$watch('currentViffId', function (newVal, oldVal) {
-        $scope.currentViff = filter(results, function (viffCase) {
+        $scope.currentViff = filter($scope.currentCases, function (viffCase) {
           return viffCase.id == newVal;
         })[0];
       });
 
       $scope.$watch('search.browser', function (newVal, oldVal) {
-        $scope.currentViff = filter(results, function (viffCase) {
-          return viffCase.browser == $scope.search.browser;
-        })[0];   
+        resetCurrentCases();
+      });
 
+      $scope.$watch('search.url', function (newVal, oldVal) {
+        $scope.currentCases = filter($scope.currentBrowserCases, function(viffCase) {
+          return viffCase.url.indexOf(newVal) >= 0;
+        });  
+        $scope.currentViff = $scope.currentCases[0];
         $scope.currentViffId = $scope.currentViff.id;
       });
 
@@ -54,10 +64,10 @@ angular.module('viffReport', [])
 
     key('j', function () {
       $scope.$apply(function () {
-        var currentBrowserCases = filter($scope.cases, function(item){ return item.browser == $scope.search.browser})
-        var idx = currentBrowserCases.indexOf($scope.currentViff);
-        if(idx != currentBrowserCases.length - 1) {
-          $scope.currentViff = currentBrowserCases[idx + 1];
+        
+        var idx = $scope.currentCases.indexOf($scope.currentViff);
+        if(idx != $scope.currentCases.length - 1) {
+          $scope.currentViff = $scope.currentCases[idx + 1];
           $scope.currentViffId = $scope.currentViff.id;
         }
         return false;
@@ -66,10 +76,9 @@ angular.module('viffReport', [])
 
     key('k', function () {
       $scope.$apply(function () {
-        var currentBrowserCases = filter($scope.cases, function(item){ return item.browser == $scope.search.browser})
-        var idx = currentBrowserCases.indexOf($scope.currentViff);
+        var idx = $scope.currentCases.indexOf($scope.currentViff);
         if(idx != 0) {
-          $scope.currentViff = currentBrowserCases[idx - 1];
+          $scope.currentViff = $scope.currentCases[idx - 1];
           $scope.currentViffId = $scope.currentViff.id;
         }
         return false;

@@ -1,17 +1,18 @@
-@import url(http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,300,400,600);
+/*@import url(http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,300,400,600);*/
 
 body{font: normal normal 14px/1.5 'Open Sans', sans-serif; padding-bottom: 60px}
 img{ width: 100%;}
 
 header{background-color: #333;background-repeat: repeat-x;background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#444), to(#333));}
 header {padding: 0 10px; color: #f1f1f2;position: fixed; left: 0; right: 0;z-index: 4;}
-header .select-browser,header .show-result {line-height: 42px;}
+header .select-browser{line-height: 42px;float: left;margin-right: 14px;}
 header .select-browser select {width: 100px; margin-left: -110px; -webkit-border-radius: 0px;padding: 2px 8px;}
 header .select-browser label {color: #ccc;padding:2px 4px;border-right:1px solid #999;border-top: 1px solid #999;border-bottom: 1px solid #999;}
 header .select-browser label:first-child{padding-left:8px;border-left: 1px solid #999;border-top-left-radius: 6px;border-bottom-left-radius: 6px;}
 header .select-browser label:last-child{padding-right:8px;border-top-right-radius: 6px;border-bottom-right-radius: 6px;border-: 6px;}
 header .select-browser .checked-true{background: rgb(207, 105, 123);color: #f1f1f2}
-header .show-result{text-align: right;}
+header .show-only-diff {line-height: 42px;}
+header .show-result{text-align: right;line-height: 42px;}
 header .show-result .count {font-size: 18px}
 h1 {margin: 0;font-size: 1.5em;line-height: 42px;}
 .pathList { border-right:1px solid rgb(220, 220, 224);position: fixed; top: 80px; bottom: 0; overflow: auto; z-index: 3;}
