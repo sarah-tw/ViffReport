@@ -1,7 +1,7 @@
 /*@import url(http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,300,400,600);*/
 
 body{font: normal normal 14px/1.5 'Open Sans', sans-serif; padding-bottom: 60px}
-img{ width: 100%;}
+img{ max-width: 100%;}
 
 header{background-color: #333;background-repeat: repeat-x;background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#444), to(#333));}
 header {padding: 0 10px; color: #f1f1f2;position: fixed; left: 0; right: 0;z-index: 4;}
