@@ -2,7 +2,7 @@ angular.module('viffReport', [])
   .controller('reportCtrl', ['dataService', '$scope', function (dataService, $scope, $http) {
     function init(results, diffCount, caseCount, totalAnalysisTime, browsers) {
       $scope.totalAnalysisTime = totalAnalysisTime;
-      $scope.diffCount = diffCount;
+      
       $scope.caseCount = caseCount;
       $scope.sameCount = caseCount - diffCount;
       $scope.cases = results;
@@ -20,6 +20,16 @@ angular.module('viffReport', [])
         $scope.currentCases = $scope.currentBrowserCases;
         $scope.currentViff = $scope.currentBrowserCases[0];
         $scope.currentViffId = $scope.currentViff.id;  
+      }
+
+      $scope.diffCount = function(){
+        var count = 0;
+        angular.forEach($scope.cases, function (item) {
+          if(item.misMatchPercentage != 0) {
+            count = count + 1;
+          }
+        });
+        return count;
       }
 
       $scope.$watch('currentViffId', function (newVal, oldVal) {
