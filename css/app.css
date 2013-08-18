@@ -17,7 +17,7 @@ header .show-result .count {font-size: 18px}
 h1 {margin: 0;font-size: 1.5em;line-height: 42px;}
 .pathList { border-right:1px solid rgb(220, 220, 224);position: fixed; top: 80px; bottom: 0; overflow: auto; z-index: 3;}
 .envImages { position: fixed; top: 80px; bottom: 0; overflow: auto; left: 16.666%; z-index: 2;border-right: 1px solid rgb(220, 220, 224);}
-.pathList a, .envImages a{display: block; border: 1px solid #ccc;max-height: 300px;overflow: hidden;}
+.pathList a, .envImages a{text-align: center;display: block; border: 1px solid #ccc;max-height: 300px;overflow: hidden;}
 .pathList img, .envImages img{}
 .diff-header {height: 37px;line-height: 35px;position: fixed;top: 43px;z-index: 5;width: 100%;background-color: rgb(229, 229, 235);}
 .diff-header ul {margin: 0;padding: 0;margin-left: 2%}
@@ -25,6 +25,7 @@ h1 {margin: 0;font-size: 1.5em;line-height: 42px;}
 .diff-header ul li{list-style: none;float: right;padding-right: 10px;}
 .diff-header ul li:first-child {float: left}
 .diffImage{margin-left: 49.99999%; position: relative; margin-top: 80px; z-index: 1}
+.diffImage a {text-align: center;display: block}
 .env-iamge-block {max-width: 90%; margin: 0 auto;}
 .env-iamge-block:last-child {margin-top: 20px;}
 .env-iamge-block label{font-weight: bold;line-height: 2;}

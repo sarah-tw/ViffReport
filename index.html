@@ -62,21 +62,21 @@
         <div class="env-iamge-block">
           <label>{{currentViff.envs[0].name}}</label>
           <a ng-href="{{currentViff.envs[0].path | imagePath }}">
-            <img ng-src="{{currentViff.envs[0].path | imagePath }}"/>
+            <img src="img/loader.gif" data-loading-src="img/loader.gif" data-src="{{currentViff.envs[0].path | imagePath}}"/>
           </a>
         </div>
 
         <div class="env-iamge-block">
           <label>{{currentViff.envs[1].name}}</label>
           <a ng-href="{{currentViff.envs[1].path | imagePath }}">
-            <img ng-src="{{currentViff.envs[1].path | imagePath }}"/>
+            <img src="img/loader.gif" data-loading-src="img/loader.gif" data-src="{{currentViff.envs[1].path | imagePath }}"/>
           </a>
         </div>
       </div>
 
       <div class="pure-u-1-2 diffImage">
         <a ng-href="{{currentViff.diffPath | imagePath }}">
-          <img ng-src="{{currentViff.diffPath | imagePath }}"/>
+          <img src="img/loader.gif" data-loading-src="img/loader.gif" data-src="{{currentViff.diffPath | imagePath }}"/>
         </a>
       </div>
 
@@ -88,13 +88,14 @@
   </main>  
   
   <script type="text/javascript" src="js/jquery.min.js"></script>
+  <script type="text/javascript" src="js/jquery.unveil.min.js"></script>
   <script type="text/javascript" src="js/keymaster.min.js"></script>
   <script type="text/javascript" src="js/angular.min.js"></script>
   <script type="text/javascript" src="js/angular.modules.js"></script>
   <script type="text/javascript" src="js/controllers.js"></script>
   <script type="text/javascript" src="js/services.js"></script>
   <script type="text/javascript" src="js/filters.js"></script>
-
   <script type="text/javascript" src="js/app.js"></script>
+
 </body>
 </html>

@@ -36,6 +36,13 @@ angular.module('viffReport', [])
         $scope.currentViff = filter($scope.currentCases, function (viffCase) {
           return viffCase.id == newVal;
         })[0];
+        angular.forEach($(".envImages img, .diffImage img"), function(img){
+          img.src = "img/loader.gif";
+        })
+        setTimeout(function(){          
+          $(".envImages img, .diffImage img").unveil();
+        }, 5)
+        
       });
 
       $scope.$watch('search.browser', function (newVal, oldVal) {
