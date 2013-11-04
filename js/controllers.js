@@ -7,7 +7,7 @@ angular.module('viffReport', [])
       $scope.sameCount = caseCount - diffCount;
       $scope.cases = results;
       $scope.browsers = browsers;
-      $scope.showAll = false;
+      $scope.showAll = true;
       $scope.search = {
         browser: browsers[0],
         url: '',
@@ -31,6 +31,20 @@ angular.module('viffReport', [])
         });
         return count;
       }
+      $scope.$watch('showAll', function(newVal, oldVal){
+        // newVal false means show only diff;
+        // newVal true means show all
+        if(newVal == false){
+          $scope.currentBrowserCases = filter($scope.cases, function(viffCase){
+            return viffCase.isSameDimensions == newVal
+          });  
+          $scope.currentCases = $scope.currentBrowserCases;
+          $scope.currentViff = $scope.currentBrowserCases[0];
+          $scope.currentViffId = $scope.currentViff.id;  
+        }else {
+          resetCurrentCases();
+        }
+      });
 
       $scope.$watch('currentViffId', function (newVal, oldVal) {
         $scope.currentViff = filter($scope.currentCases, function (viffCase) {
