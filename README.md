@@ -11,5 +11,6 @@ Just list some useful examples as below:
 5. **Event Handling**
 6. **Responsive**
 7. **Multiple browsers**
-8. **Programmable**
-9. **Browserstack**
+8. **Multiple Enviorments**
+9. **Programmable**
+10. **Browserstack**
