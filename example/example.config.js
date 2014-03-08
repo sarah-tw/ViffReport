@@ -20,7 +20,8 @@ module.exports = {
       'Chart Difference': ['/chart_difference.html', function (browser, webdriver) {
         size(800)(browser).sleep(2000);
       }]
-    }
+    },
+    { 'Content Difference': ['/content_difference.html', size(1000)] }
   ],
   reportFormat: 'file'
 };
