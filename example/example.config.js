@@ -9,7 +9,7 @@ function size(width) {
 
 module.exports = {
   seleniumHost: 'http://localhost:4444/wd/hub',
-  browsers: ['firefox'],
+  browsers: ['firefox', 'chrome'],
   envHosts: {
     build: 'http://localhost:4000/example/build',
     prod: 'http://localhost:4000/example/prod'
@@ -21,7 +21,12 @@ module.exports = {
         size(800)(browser).sleep(2000);
       }]
     },
-    { 'Content Difference': ['/content_difference.html', size(1000)] }
+    { 'Content Difference': ['/content_difference.html', size(1000)] },
+    {
+      'Event Handling': ['/event_handling.html', function (browser) {
+        browser.element('#showContent').click();
+      }]
+    }
   ],
   reportFormat: 'file'
 };
