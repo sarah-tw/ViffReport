@@ -15,7 +15,7 @@ Just list some useful examples as below:
 9. **Browserstack**
 10. **Programmable**
 
-## How to run
+## Examples of finding differences (No.1 - 8)
 
 Install `viff` and `wdm`.
 
@@ -41,10 +41,6 @@ $ viff example/example.config.js
 ```
 [![Play Command Line Record](http://p3.zhimg.com/fc/cd/fccdb994e0e2f69d371ec9e3ee072210_m.jpg)](http://asciinema.org/a/8063)
 
-Open single http server `python -m SimpleHTTPServer` could get the result.
-
-![example result](http://p4.zhimg.com/c0/dd/c0dd87e2022f12eb12af593f98a70ac8_m.jpg)
-
 In `example.config.js`, you could find this part for **Multiple Browsers** and **Multiple Environments**.
 
 ```
@@ -65,7 +61,7 @@ And `size()` method for browser responsive testcase. Actually, we just used scri
 }
 ```
 
-### Browserstack example
+## Browserstack example
 
 Run
 
@@ -89,7 +85,11 @@ Remember to fill in your `username` and `key` in config file before running it.
 ...
 ```
 
-### Programmable example
+If you want to review the output, just open single http server `python -m SimpleHTTPServer` could get the result.
+
+![example result](http://p4.zhimg.com/c0/dd/c0dd87e2022f12eb12af593f98a70ac8_m.jpg)
+
+## Programmable example
 
 Run
 
