@@ -1,3 +1,5 @@
 .DS_Store
 screenshots/
+node_modules/
 report.json
+output.png

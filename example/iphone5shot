@@ -1,0 +1,22 @@
+#!/usr/bin/env node
+
+var Viff = require('viff');
+var FS = require('fs');
+
+var viff = new Viff('http://hub.browserstack.com/wd/hub');
+var capabilities = {
+  'browserName' : 'iPhone',
+  'platform' : 'MAC',
+  'device' : 'iPhone 5',
+  'browserstack.user': 'your-name',
+  'browserstack.key': 'your-key'
+};
+
+var path = ['/', function (driver) {
+  driver.sleep(2000);
+}];
+
+viff.takeScreenshot(capabilities, process.argv[2], path, function (bufferImg) {
+  FS.writeFileSync('output.png', bufferImg);
+  viff.closeDrivers();
+});

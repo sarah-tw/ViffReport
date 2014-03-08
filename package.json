@@ -1,0 +1,27 @@
+{
+  "name": "viff-examples",
+  "version": "0.0.1",
+  "description": "viff examples",
+  "main": "index.js",
+  "directories": {
+    "example": "example"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/winsonwq/viff-examples.git"
+  },
+  "keywords": [
+    "viff"
+  ],
+  "author": "Wang Qiu",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/winsonwq/viff-examples/issues"
+  },
+  "dependencies": {
+    "viff": "~0.7.6"
+  }
+}
