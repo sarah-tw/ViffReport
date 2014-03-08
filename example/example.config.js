@@ -26,6 +26,12 @@ module.exports = {
       'Event Handling': ['/event_handling.html', function (browser) {
         browser.element('#showContent').click();
       }]
+    },
+    {
+      'Partial Difference': ['/content_difference.html', 'tr:nth-of-type(5)', size(800)]
+    },
+    {
+      'Responsive': ['/responsive.html', size(480)]
     }
   ],
   reportFormat: 'file'
