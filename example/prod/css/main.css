@@ -1,4 +1,8 @@
 .container {
   margin: 0 auto;
+  width: 600px;
+}
+
+.container.modifier {
   width: 610px;
 }
