@@ -100,3 +100,7 @@ $ ./example/iphone5shot http://www.google.com
 to take a screenshot for `http://www.google.com` in iphone 5, and generate a image called `output.png`. You could update the url you want.
 
 ![google.com in iphone 5](http://p3.zhimg.com/23/eb/23ebfae3f92bf61a6a36bbcabceb25d0_m.jpg)
+
+
+[![Bitdeli Badge](https://d2weczhvl823v0.cloudfront.net/winsonwq/viff-examples/trend.png)](https://bitdeli.com/free "Bitdeli Badge")
+
