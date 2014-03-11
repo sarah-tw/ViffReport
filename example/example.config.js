@@ -22,6 +22,9 @@ module.exports = {
     },
     { 'Content Difference': ['/content_difference.html', size(1000)] },
     {
+      'Number Difference': ['/number_difference.html', size(800)]
+    },
+    {
       'Event Handling': ['/event_handling.html', function (browser) {
         return browser.elementByCss('#showContent').click();
       }]
