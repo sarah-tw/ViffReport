@@ -1,15 +1,14 @@
 'use strict'
 
 function size(width) {
-  return function (driver, webdriver) {
-    driver.manage().window().setSize(width, 600 /* any height*/);
-    return driver;
+  return function (driver) {
+    return driver.setWindowSize(width, 600 /* any height*/);
   };
 }
 
 module.exports = {
   seleniumHost: 'http://localhost:4444/wd/hub',
-  browsers: ['firefox', 'chrome'],
+  browsers: ['firefox'],
   envHosts: {
     build: 'http://localhost:4000/example/build',
     prod: 'http://localhost:4000/example/prod'
@@ -17,14 +16,14 @@ module.exports = {
   paths: [
     { 'Tiny CSS Difference': ['/tiny_css_difference.html', size(800)] },
     {
-      'Chart Difference': ['/chart_difference.html', function (browser, webdriver) {
-        size(800)(browser).sleep(2000);
+      'Chart Difference': ['/chart_difference.html', function (browser) {
+        return size(800)(browser).sleep(2000);
       }]
     },
     { 'Content Difference': ['/content_difference.html', size(1000)] },
     {
       'Event Handling': ['/event_handling.html', function (browser) {
-        browser.element('#showContent').click();
+        return browser.elementByCss('#showContent').click();
       }]
     },
     {
