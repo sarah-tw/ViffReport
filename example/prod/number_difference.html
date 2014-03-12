@@ -1,0 +1,45 @@
+<!doctype html>
+
+<html>
+  <head>
+    <meta charset="utf8"/>
+    <link rel="stylesheet" href="../build/css/pure.css" type="text/css">
+    <link rel="stylesheet" href="css/main.css" type="text/css">
+  </head>
+  <body>
+    <div class="container">
+      <h1>Number Difference</h1>
+      <table id="numbers" class="pure-table pure-table-bordered">
+      </table>
+    </div>
+    <script type="text/javascript" charset="utf-8">
+      var rows = [
+        [89, 78, 68, 85, 89, 78, 68, 85, 96, 80, 98],
+        [96, 80, 98, 92, 22, 33, 55, 66, 89, 78, 68],
+        [83, 82, 83, 93, 89, 78, 68, 85, 96, 80, 98],
+        [91, 90, 87, 69, 87, 11, 22, 55, 83, 82, 83],
+        [93, 92, 88, 93, 87, 11, 22, 55, 91, 90, 87],
+        [90, 86, 80, 83, 89, 78, 68, 85, 93, 92, 88],
+        [94, 87, 91, 22, 87, 11, 22, 55, 90, 86, 80],
+        [83, 84, 94, 91, 87, 11, 22, 55, 94, 87, 91],
+        [89, 91, 82, 87, 87, 11, 22, 55, 83, 84, 94],
+        [85, 95, 76, 88, 89, 78, 68, 85, 89, 91, 82],
+        [87, 83, 85, 77, 87, 11, 22, 55, 85, 95, 76],
+        [82, 72, 81, 69, 44, 11, 22, 55, 87, 83, 85],
+        [81, 77, 80, 90, 89, 78, 11, 85, 82, 72, 81]
+      ];
+
+      var table = document.getElementById('numbers');
+      for(var i = 0, len = rows.length; i < len ; i++ ){
+        var row = document.createElement('tr');
+        for (var j = 0, len2 = rows[i].length; j < len2; j++) {
+          var num = rows[i][j];
+          var td = document.createElement('td');
+          td.innerHTML = num;
+          row.appendChild(td);
+        };
+        table.appendChild(row);
+      }
+    </script>
+  </body>
+</html>

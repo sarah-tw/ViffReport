@@ -1,0 +1,17 @@
+.container {
+  margin: 0 auto;
+  width: 600px;
+}
+
+.container.modifier {
+  width: 610px;
+}
+
+.tile {
+  box-sizing: border-box;
+  height: 100px;
+  background: #1f8dd6;
+  padding: 10px;
+  color: #fff;
+  border: 1px solid #fff;
+}
