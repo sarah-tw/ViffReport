@@ -1,21 +1,27 @@
 angular.module('viffReport')
   .directive('scrollToMapPosition', function ($window) {
     return function (scope, element, attributes) {
-
-      var diffImageHeight;
+      var diffImageHeight, envImage, envImageHeightDiff;
       var diffVisualHeight = $(window).height() - (43 + 35 + 60);
+      var originalSrc = element[0].src;
 
       angular.element($window).bind("scroll", function () {
-        var envImage = {
-          height: element[0].height,
-          parentHeight: element[0].parentElement.clientHeight
-        };
+        if (originalSrc !== element[0].src) {
+          envImage = {
+            height: element[0].height,
+            parentHeight: element[0].parentElement.clientHeight
+          };
+          diffImageHeight = $(".diffImage img").get(0).height;
+          envImageHeightDiff = envImage.height - envImage.parentHeight;
+        }
 
-        diffImageHeight = $(".diffImage img").get(0).height;
+        if (!envImage) {
+          return;
+        }
+
         setBlankHeight(envImage);
         var offsetY = $(document).scrollTop();
         var offsetValue = parseInt(offsetY / diffImageHeight * envImage.height);
-        var envImageHeightDiff = envImage.height - envImage.parentHeight;
 
         if (envImageHeightDiff < offsetValue) {
           setElementTop(0 - envImageHeightDiff);
