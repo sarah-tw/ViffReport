@@ -1,4 +1,4 @@
-{"compares":{"firefox":{"RCA home":{"images":{"firefox-build":"screenshots/firefox/RCA%20home/firefox-build.png","firefox-prod":"screenshots/firefox/RCA%20home/firefox-prod.png","diff":"screenshots/firefox/RCA%20home/diff.png"},"isSameDimensions":false,"misMatchPercentage":97.12,"analysisTime":1998},"RCA header":{"images":{"firefox-build":"screenshots/firefox/RCA%20header/firefox-build.png","firefox-prod":"screenshots/firefox/RCA%20header/firefox-prod.png","diff":"screenshots/firefox/RCA%20header/diff.png"},"isSameDimensions":true,"misMatchPercentage":4.66,"analysisTime":50},"RCA footer":{"images":{"firefox-build":"screenshots/firefox/RCA%20footer/firefox-build.png","firefox-prod":"screenshots/firefox/RCA%20footer/firefox-prod.png","diff":"screenshots/firefox/RCA%20footer/diff.png"},"isSameDimensions":true,"misMatchPercentage":0,"analysisTime":32}}},"caseCount":3,"sameCount":1,"diffCount":2,"totalAnalysisTime":2080}{
+{
   "compares": {
     "firefox": {
       "RCA home": {
