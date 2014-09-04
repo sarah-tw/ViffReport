@@ -25,7 +25,7 @@ h1 {margin: 0;font-size: 1.5em;line-height: 42px;}
 .diff-header input {width: 95%;padding: 3px}
 .diff-header ul li{list-style: none;float: right;padding-right: 10px;}
 .diff-header ul li:first-child {float: left}
-.diffImage{margin-left: 49.99999%; position: fixed; bottom: 30px; margin-top: 80px; z-index: 1}
+.diffImage{margin-left: 49.99999%; position: fixed; bottom: 34px; top: 80px; z-index: 1;overflow: auto;}
 .diffImage a {text-align: center;display: block}
 .env-iamge-block {max-width: 90%; margin: 0 auto;}
 .env-iamge-block:last-child {margin-top: 20px;}
@@ -36,7 +36,7 @@ h1 {margin: 0;font-size: 1.5em;line-height: 42px;}
 .viff-true label{border-left: 10px solid rgb(207, 105, 123)}
 .viff-false label{border-left: 10px solid #a0c353}
 .pure-button-xlarge {font-size: 125%}
-.diff-actions{background: rgba(241, 241, 241, .8); text-align: center;line-height: 60px;position: fixed; left: 49.99999%;bottom: 35px;z-index: 5;}
+.diff-actions{background: rgba(241, 241, 241, .8); text-align: center;line-height: 60px;position: fixed; left: 49.99999%;bottom: 34px;z-index: 5;}
 input[type="radio"]{display: none;}
 .pathList label { display: block;}
 .viff-true input[type="radio"]:checked + label{background-color: rgb(207, 105, 123);color: #f1f1f2}
