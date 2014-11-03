@@ -62,14 +62,14 @@
         <div class="env-iamge-block">
           <label>{{currentViff.envs[0].name}}</label>
           <a ng-href="{{currentViff.envs[0].path | imagePath }}">
-            <img src="img/loader.gif" data-loading-src="img/loader.gif" data-src="{{currentViff.envs[0].path | imagePath}}"/>
+            <img src="img/loader.gif" data-loading-src="img/loader.gif" data-src="{{currentViff.envs[0].path | imagePath}}" scroll-to-map-position/>
           </a>
         </div>
 
         <div class="env-iamge-block">
           <label>{{currentViff.envs[1].name}}</label>
           <a ng-href="{{currentViff.envs[1].path | imagePath }}">
-            <img src="img/loader.gif" data-loading-src="img/loader.gif" data-src="{{currentViff.envs[1].path | imagePath }}"/>
+            <img src="img/loader.gif" data-loading-src="img/loader.gif" data-src="{{currentViff.envs[1].path | imagePath }}" scroll-to-map-position/>
           </a>
         </div>
       </div>
@@ -78,6 +78,8 @@
         <a ng-href="{{currentViff.diffPath | imagePath }}">
           <img src="img/loader.gif" data-loading-src="img/loader.gif" data-src="{{currentViff.diffPath | imagePath }}"/>
         </a>
+        <div class="blank">
+        </div>
       </div>
 
       <div class="pure-u-1-2 diff-actions">
@@ -97,6 +99,7 @@
   <script type="text/javascript" src="js/angular.modules.js"></script>
   <script type="text/javascript" src="js/controllers.js"></script>
   <script type="text/javascript" src="js/services.js"></script>
+  <script type="text/javascript" src="js/directives.js"></script>
   <script type="text/javascript" src="js/filters.js"></script>
   <script type="text/javascript" src="js/app.js"></script>
 
